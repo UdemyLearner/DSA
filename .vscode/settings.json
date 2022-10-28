@@ -1,0 +1,10 @@
+{
+    "C_Cpp.errorSquiggles": "Disabled",
+    "files.associations": {
+        "utility": "cpp",
+        "ios": "cpp",
+        "xiosbase": "cpp",
+        "xutility": "cpp",
+        "vector": "cpp"
+    }
+}
