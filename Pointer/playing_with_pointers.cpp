@@ -13,8 +13,12 @@ int main () {
     int *q = &i;
     cout << q << endl;
     cout << *q << endl;
+
+    ANOTHER WAY TO POINTER A POINTER TO THE ADDRESSS OF AN VAREABLE 
     int *p = 0;
     p = &i;
+
+
     cout << p << endl;
     cout << *p << endl;
     */
