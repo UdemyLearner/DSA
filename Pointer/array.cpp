@@ -3,6 +3,8 @@ using namespace std;
 
 int main () {
 
+    // arr[i] is same as *(arr+i)
+
     //int arr[10] = {23, 122, 41, 67};
 
    /*

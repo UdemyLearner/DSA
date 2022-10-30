@@ -14,3 +14,10 @@ int main(int argc, char const *argv[])
 
     return 0;
 }
+
+/*
+
+& -> address of variable
+* -> value of the address at which pointer is pointing
+
+*/
