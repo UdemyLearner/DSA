@@ -11,6 +11,17 @@ void updateRef(int &n)  //Pass by Refrence
     n++;                // alag sa koi memory block nahi use hoga
 }
 
+int& func(int a){
+    int num = a;
+    int &ans = num;
+    return ans;
+} // func(n); <- Gives Warning as after func(n) call all the variable defined in code block of func(n) will be cleared as they are local variable 
+
+int* fun(int n) {
+    int* ptr = &n;
+    return ptr;
+} // fun(n); <- Gives Warning as after func(n) call all the variable defined in code block of func(n) will be cleared as they are local variable 
+
 int main(int argc, char const *argv[])
 {
     int i = 5;
@@ -31,6 +42,9 @@ int main(int argc, char const *argv[])
     cout << "before updateRef() -> " << i << endl;
     updateRef(i);
     cout << " after updateRef() -> " << i << endl;
+
+    // func(n); <- Gives Warning as after func(n) call all the variable drfined in code block of func(n) will be cleared as they are local variable 
+    // fun(n); <- Gives Warning as after func(n) call all the variable drfined in code block of fun(n) will be cleared as they are local variable 
 
     return 0;
 }
