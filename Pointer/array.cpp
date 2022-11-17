@@ -1,4 +1,6 @@
-#include<iostream>
+#include <conio.h>
+#include <iostream>
+#include <time.h>
 using namespace std;
 
 int main () {
@@ -48,8 +50,9 @@ int main () {
     cout << ptr << endl;
 
 
+    _getch();
 
-
+    
 
 
     return  0;
