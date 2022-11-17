@@ -34,8 +34,9 @@
 *.exe
 *.out
 *.app
-.deb
-
+*.deb
+*.txt
 # End of https://www.toptal.com/developers/gitignore/api/c++
 Pointer/playing_with_pointers
 Pointer/intro
+Pointer/doblePtr
