@@ -34,5 +34,7 @@
 *.exe
 *.out
 *.app
+.deb
 
 # End of https://www.toptal.com/developers/gitignore/api/c++
+Pointer/playing_with_pointers
