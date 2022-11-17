@@ -10,7 +10,7 @@ int main(int argc, char const *argv[])
 
     int *p = &num;
     cout << "Address to which pointer p is pointing to is " << p << endl
-         << " value of pointer p which variable it is pointing to " << *p;
+         << " value of pointer p which variable it is pointing to " << *p<<endl;
 
     return 0;
 }
