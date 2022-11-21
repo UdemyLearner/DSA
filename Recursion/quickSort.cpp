@@ -1,3 +1,11 @@
+/*
+time complexity
+    best  =0(nlogn)
+    worst =o(nlogn)
+    avg   =0(n^2)
+space complexity
+    o(n)
+*/
 #include <iostream>
 using namespace std;
 
