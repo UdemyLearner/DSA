@@ -1,6 +1,7 @@
 /*  https://www.spoj.com/problems/EKO/ */
 
 #include <iostream>
+#include <vector>
 using namespace std;
 
 long long minValue(long long arr[], long long size)
@@ -80,8 +81,9 @@ int main()
     long long max = maxValue(arr, size);
     long long ans = bs(arr, size, min, max, height);
     cout << ans;
-    // return ans;
-    return 0;
+    delete []arr;
+    //return ans;
+    //return 0;
 }
 
 // /*  https://www.spoj.com/problems/EKO/ */
