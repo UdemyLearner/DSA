@@ -28,98 +28,61 @@ long long maxValue(long long arr[], long long size)
     return max;
 }
 
-long long bs(long long arr[],long long size, long long min, long long max, long long height)
+long long bs(long long arr[], long long size, long long min, long long max, long long height)
 {
     long long s = min;
     long long e = max;
     long long m = s + (e - s) / 2; // 10+20/2 = 15
     long long c = 0;
-    long long temp=0;
+    long long temp = 0;
 
     while (s < e)
     {
-        temp=0;
+        temp = 0;
 
         for (int i = 0; i < size; i++)
         {
             if (arr[i] > m)
             {
                 c = arr[i] - m;
-                temp+=c;           
+                temp += c;
             }
-            //cout<<endl<<temp<<endl;
-            
+            // cout<<endl<<temp<<endl;
         }
-        if(temp==height){
+        if (temp == height)
+        {
             return m;
         }
-        if(temp>height){
-                s = m + 1 ;
-            }
-            else{
-                e = m ;
-            }
+        if (temp > height)
+        {
+            s = m + 1;
+        }
+        else
+        {
+            e = m;
+        }
 
-            m = s + (e - s) / 2;
+        m = s + (e - s) / 2;
     }
     return m;
 }
 
 int main()
 {
-    long long size,height;
-    cin >> size>>height;
-    long long *arr = new long long[size] ;
+    long long size, height;
+    cin >> size >> height;
+    long long *arr = new long long[size];
     for (int i = 0; i < size; i++)
     {
         cin >> arr[i];
     }
     long long min = minValue(arr, size);
     long long max = maxValue(arr, size);
-    long long ans =  bs(arr,size, min, max, height);
+    long long ans = bs(arr, size, min, max, height);
     cout << ans;
-   // return ans;
-   return 0;
+    // return ans;
+    return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // /*  https://www.spoj.com/problems/EKO/ */
 
@@ -168,10 +131,10 @@ int main()
 //             if (arr[i] > m)
 //             {
 //                 c = arr[i] - m;
-//                 temp+=c;           
+//                 temp+=c;
 //             }
 //             //cout<<endl<<temp<<endl;
-            
+
 //         }
 //         if(temp==height){
 //             return m;
@@ -202,7 +165,7 @@ int main()
 //     {
 //         cout << arr[i];
 //     }
-    
+
 //     // int arr[5] = {4, 42, 40, 26, 46};
 //     // int arr1[4] = {20 ,15 ,10 ,17};
 //     // int min = minValue(arr, 5);
