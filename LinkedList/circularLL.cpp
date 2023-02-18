@@ -27,6 +27,7 @@ public:
 void insertNode(Node *&tail, int element, int d)
 {
     // element is present in the list
+    //empty linked list
     if (tail == NULL)
     {
         Node *newNode = new Node(d);
