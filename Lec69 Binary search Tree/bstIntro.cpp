@@ -1,3 +1,7 @@
+/*
+TC->0(logn)
+SC->O()    
+*/
 #include <iostream>
 #include<queue>
 using namespace std;
