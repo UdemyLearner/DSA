@@ -106,6 +106,20 @@ void insertintoBST(Node *&root, int d)
     }
 }
 
+Node* minVal(Node* root){
+    Node* t = root;
+    while(t->left != NULL){
+        t = t -> left;
+    }
+    return t;
+}
+Node* maxVal(Node* root){
+    Node* t = root;
+    while(t->right != NULL){
+        t = t -> right;
+    }
+    return t;
+}
 void takeinput(Node *&root)
 {
     int d;
@@ -114,6 +128,48 @@ void takeinput(Node *&root)
     {
         insertintoBST(root, d);
         cin >> d;
+    }
+}
+
+Node* deleteBST(Node* root,int d){
+    if(root == NULL)
+        return root;
+    if(root->data == d){  
+        //0 child
+            if(root->left == NULL && root->right == NULL){
+                delete root;
+                return NULL;
+            }
+        //1 child
+            //left Child
+                if(root->left != NULL && root->right == NULL){
+                    Node* t = root->left;
+                    delete root;
+                    return t;
+                }
+            //right child
+                if(root->left == NULL && root->right != NULL){
+                    Node* t = root->right;
+                    delete root;
+                    return t;
+                }    
+        //2 child
+            //option1:left m sa max 
+            //=>option2:right m sa min
+            if(root->left != NULL && root->right != NULL){
+                int mini = minVal(root->right)->data;
+                root->data = mini;
+                root -> right = deleteBST(root->right,mini);
+                return root;
+            }
+            
+    }else if(root->data > d)
+    {
+        root->left = deleteBST(root->left,d);
+        return root;
+    }else{
+        root->right = deleteBST(root->right,d);
+        return root;
     }
 }
 
@@ -130,7 +186,12 @@ int main(int argc, char const *argv[])
     preorder(root);
     cout<<endl<<"Printing postOrder"<<endl;
     postorder(root);
+    cout<<endl<<"Min Values is  :  "<<minVal(root)->data;
+    cout<<endl<<"Max Values is  :  "<<maxVal(root)->data<<endl;
+    root = deleteBST(root,90);
+    cout<<"Printing BST"<<endl;
+    levelOrderTraversal(root);
     return 0;
 }
 // 10 8 21 7 21 5 4 3 -1
-// 10 8 21 7 27 5 4 3 22 6 -1
+// 50 20 70 10 30 90 110 -1
