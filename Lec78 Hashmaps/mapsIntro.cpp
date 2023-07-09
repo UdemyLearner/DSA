@@ -2,6 +2,11 @@
 using namespace std;
 int main(int argc, char const *argv[])
 {
+    /*
+    Time Complexity:
+        unordered_map => o(n)
+        map => o(log n)
+    */
     unordered_map<string,int> m;
     pair<string,int> p1 = make_pair("name",1);
     m.insert(p1);
