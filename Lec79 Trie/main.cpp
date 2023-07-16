@@ -109,5 +109,6 @@ int main(int argc, char const *argv[])
 {
     Trie *t;
     t->insert("apple");
+    cout<<"search" <<t->search("apple") << endl;
     return 0;
 }
