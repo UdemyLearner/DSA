@@ -26,6 +26,17 @@ class graph{
 
 };
 
+/*
+// To Creat adj list using Vector {better complexity}
+vector<vector<int>> adj(v);
+    for (int i = 0; i < e; i++) {
+        int u = edges[i][0];
+        int v = edges[i][1];
+
+        adj[u].push_back(v);
+    }
+*/
+
 int main(int argc, char const *argv[])
 {
 
